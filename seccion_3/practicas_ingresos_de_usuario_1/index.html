@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ingreso usuario</title>
+</head>
+<body>
+    <p> ingrese su correo</p>
+    <input type="email" id="inputTexto">
+    <button onclick="mostrarTexto()">saludar</button>
+    <script>
+        function mostrarTexto (){
+            let suNombre = document.getElementById("inputTexto")
+            alert ("Hola usuario " + suNombre.value)
+        }
+    </script>
+</body>
+</html>
