@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio 1</title>
+    <style>
+        audio::-webkit-media-controls-panel {
+            background-color: coral;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <button onclick="comenzarTiempo()">Alarma</button>
+    <audio id="audioAlarma" controls>
+        <source src="sonidos2/alarma.mp3" type="audio/mp3">
+        sonido no habilitados
+    </audio>
+
+
+    <script>
+        let elementoAlarma = document.getElementById("audioAlarma");
+
+        function comenzarTiempo() {
+            audioAlarma.play();
+        }
+
+    </script>
+
+</body>
+
+</html>
