@@ -1,0 +1,13 @@
+body{
+    background-color: rgb(10, 171, 220);
+}
+
+h1{
+    color: rgb(199, 80, 33);
+}
+#intentar{
+    background-color: lightseagreen;
+}
+#terminar{
+    background-color:lightskyblue
+}

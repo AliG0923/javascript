@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de preguntas</title>
+
+    <link rel="stylesheet" href="misEstilos.css">
+</head>
+<body onload="iniciarContador()">
+    
+    <h1> Responde a las siguientes preguntas</h1>
+    <div id="contador">30</div>
+    
+    <script>
+        let tiempo = 30;
+        let intervalo;
+        
+        function actualizarContador(){
+            document.getElementById("contador").textContent = tiempo;
+        }
+
+        function contar(){
+            if (tiempo > 0){
+                tiempo--;
+                console.log(tiempo)
+                 actualizarContador();
+            } else {
+                detenerContador();
+                alert("GAME OVER: se acabo el tiempo. Intente de nuevo");
+            }
+        }
+
+         function iniciarContador(){
+            if (!intervalo)
+            intervalo = setInterval(contar,1000);
+        }
+
+        function detenerContador(){
+            clearInterval(intervalo);
+            intervalo = null;
+        }
+
+        function reiniciarContador(){
+            detenerContador();
+            tiempo = 30;
+            actualizarContador();
+        }
+        actualizarContador();
+    </script>
+    <p>¿Cual es el organo mas grande del cuerpo humano?</p>
+    <input type="text">
+    <p>¿Qué órgano usamos para pensar?</p>
+    <input type="text">
+    <p>¿Cómo se llama la fuerza invisible que nos mantiene pegados al suelo?</p>
+    <input type="text">
+    <p>¿Qué órgano produce la insulina para controlar el azúcar en la sangre?</p>
+    <input type="text">
+    <p>¿Cómo se llama la molécula que contiene todas las instrucciones genéticas de un ser vivo?</p>
+    <input type="text"><br>
+    <button id="terminar" onclick="detenerContador()">Termine</button><br>
+    <button id="intentar" onclick=" location.reload();">Volver a intentarlo</button>
+</body>
+</html>
