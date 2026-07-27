@@ -16,7 +16,7 @@
 
 <body>
     <button onclick="comenzarTiempo()">Alarma</button>
-    <audio id="audioAlarma" controls>
+    <audio id="audioAlarma" >
         <source src="sonidos2/alarma.mp3" type="audio/mp3">
         sonido no habilitados
     </audio>
@@ -26,7 +26,7 @@
         let elementoAlarma = document.getElementById("audioAlarma");
 
         function comenzarTiempo() {
-            audioAlarma.play();
+            elementoAlarma.play();
         }
 
     </script>

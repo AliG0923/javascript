@@ -11,8 +11,13 @@
     
     <h1> Responde a las siguientes preguntas</h1>
     <div id="contador">30</div>
+    <audio id="alarm">
+        <source src="sonido_coti/alarma/alarma.mp3" type="audio/mp3">
+    </audio>
     
     <script>
+
+        
         let tiempo = 30;
         let intervalo;
         
@@ -27,7 +32,15 @@
                  actualizarContador();
             } else {
                 detenerContador();
+
+                 let elementoAlarma = document.getElementById("alarm");
+
+        function comenzarTiempo() {
+            elementoAlarma.play();
+        }
+                
                 alert("GAME OVER: se acabo el tiempo. Intente de nuevo");
+                
             }
         }
 
@@ -39,6 +52,14 @@
         function detenerContador(){
             clearInterval(intervalo);
             intervalo = null;
+             alert(new Date().toLocaleDateString('es-ES') + "\n"
+               + primer.value + "\n"
+                + segundo.value + "\n" 
+                + tercero.value + "\n" 
+                + cuarto.value + "\n" 
+                + quinto.value +"\n")
+
+            
         }
 
         function reiniciarContador(){
@@ -47,17 +68,21 @@
             actualizarContador();
         }
         actualizarContador();
+
+        
+
+        
     </script>
     <p>¿Cual es el organo mas grande del cuerpo humano?</p>
-    <input type="text">
+    <input type="text" id="primer">
     <p>¿Qué órgano usamos para pensar?</p>
-    <input type="text">
+    <input type="text" id="segundo">
     <p>¿Cómo se llama la fuerza invisible que nos mantiene pegados al suelo?</p>
-    <input type="text">
+    <input type="text" id="tercero">
     <p>¿Qué órgano produce la insulina para controlar el azúcar en la sangre?</p>
-    <input type="text">
+    <input type="text" id="cuarto">
     <p>¿Cómo se llama la molécula que contiene todas las instrucciones genéticas de un ser vivo?</p>
-    <input type="text"><br>
+    <input type="text" id="quinto"><br>
     <button id="terminar" onclick="detenerContador()">Termine</button><br>
     <button id="intentar" onclick=" location.reload();">Volver a intentarlo</button>
 </body>
