@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parametro</title>
+</head>
+<body>
+    <p>ponga un numero</p>
+    <input type="number" id="primeroNum">
+    <p>ponga su segundo numero</p>
+    <input type="number" id="segundoNum">
+    <button onclick="sumar()">click aqui</button>
+
+
+    <script>
+        function suma(primeroNum,segundoNum){
+            resultado = primeroNum + segundoNum;
+            return resultado;
+        }
+
+        function sumar(){
+           let elementoprimerNum= parseInt(document.getElementById("primeroNum").value);
+           let elementosegundoNum = parseInt(document.getElementById("segundoNum").value); 
+           let elementoSuma = suma (elementoprimerNum,
+            elementosegundoNum);
+            alert(elementoSuma);
+        }
+    </script>
+</body>
+</html>
