@@ -15,16 +15,16 @@
     <button onclick="signoMulti()">x</button>
     <button onclick="signoDivi()"> / </button><br>
 
-    <button onclick="raiz()"> raíz </button>
-    <button onclick="potencia()"> Potencia </button><br>
+    <button onclick="signoraiz()"> raíz </button>
+    <button onclick="signoPotencia()"> Potencia </button><br>
 
-    <button onclick="absoluto()"> Absoluto </button>
+    <button onclick="sigabsoluto()"> Absoluto </button>
     <button onclick="random()"> Random </button><br><br><br>
 
     <h3>Resultado:</h3>
     <input type="text" id="textoResultado"><br>
 
-    <button onclick="redondeo()">round</button>
+    <button onclick="sigredondeo()">round</button>
     <button onclick="suelo()">floor</button>
     <button onclick="techo()">ceil</button>
 
@@ -72,20 +72,77 @@
             }
 
             function dividir (numero1,numero2){
-                resultado = numero1 / numero2;
-                return resultado;
+                 let resultado = numero1 / numero2;
+                 return resultado;
             }
 
             function signoDivi(){
-                let elementonumero1 = parseInt(document.getElementById("numero1").value);
-                let elementonumero2 = parseInt(document.getElementById("numero2").value);
+                let elementonumero1 = parseFloat(document.getElementById("numero1").value);
+                let elementonumero2 = parseFloat(document.getElementById("numero2").value);
                 let elementoText = document.getElementById("textoResultado");
-                let elementDivi = dividir(elementonumero1,elementonumero2);
+                let elementoDivi = dividir(elementonumero1,elementonumero2);
+                
+                elementoText.value = elementoDivi;
+
+            }
+
+            function raiz(numero1) {
+             resultado = Math.sqrt(numero1);
+            return resultado;
+
+            }
+
+            function signoraiz(){
+                let elementonumero1 = parseInt(document.getElementById("numero1").value);
+                let elementoText = document.getElementById("textoResultado");
+                let elementoraiz = raiz (elementonumero1);
+
                 document.getElementById("textoResultado").value = resultado;
             }
-            
 
-        
+            function potencia(numero1,numero2){
+                resultado = Math.pow (numero1,numero2);
+                return  resultado;
+            }
+
+            function signoPotencia(){
+                elementonumero1 = parseInt(document.getElementById("numero1").value);
+                elementonumero2 = parseInt(document.getElementById("numero2").value);
+                elementoText = document.getElementById("textoResultado");
+                elementopotencia = potencia (elementonumero1,elementonumero2);
+
+                document.getElementById("textoResultado").value = resultado;
+            }
+
+            function absoluto(numero1,numero2){
+                resultado = Math.abs(numero1 - numero2);
+                return resultado;
+            }
+
+            function sigabsoluto(numero1,numero2){
+                elementonumero1 = parseInt(document.getElementById("numero1").value);
+                elementonumero2 = parseInt(document.getElementById("numero2").value);
+                elementoText = document.getElementById("textoResultado");
+                elementoabsoluto = absoluto (elementonumero1,elementonumero2);
+
+                document.getElementById("textoResultado").value = resultado;
+
+            }
+
+            
+            function random (minimo,maximo){
+               resultado = Math.floor(Math.random() * (100-1) + 1);
+               elementoText = document.getElementById("textoResultado");
+               document.getElementById("textoResultado").value = resultado;
+            
+            }
+
+            function sigredondeo(textoResultado){
+                let redondeo = Math.round(textoResultado);
+                document.getElementById("textoResultado").value = redondeo;
+
+            }
+
     </script>
 </body>
 </html>
