@@ -9,24 +9,24 @@
     <input type="number" id="numero1">
     <input type="number" id="numero2"><br>
 
-    <button onclick="signoSum()">+</button>
-    <button onclick="signoRes()"> - </button>
+    <button onclick="signoSum()" id="suma">+</button>
+    <button onclick="signoRes()" id="resta"> - </button>
 
-    <button onclick="signoMulti()">x</button>
-    <button onclick="signoDivi()"> / </button><br>
+    <button onclick="signoMulti()" id="multiplicacion">x</button>
+    <button onclick="signoDivi()" id="division"> / </button><br>
 
-    <button onclick="signoraiz()"> raíz </button>
-    <button onclick="signoPotencia()"> Potencia </button><br>
+    <button onclick="signoraiz()" id="raiz"> raíz </button>
+    <button onclick="signoPotencia()" id="potencia"> Potencia </button><br>
 
-    <button onclick="sigabsoluto()"> Absoluto </button>
-    <button onclick="random()"> Random </button><br><br><br>
+    <button onclick="sigabsoluto()" id="absoluto"> Absoluto </button>
+    <button onclick="random()" id="random"> Random </button><br><br><br>
 
     <h3>Resultado:</h3>
     <input type="text" id="textoResultado"><br>
 
-    <button onclick="sigredondeo()">round</button>
-    <button onclick="suelo()">floor</button>
-    <button onclick="techo()">ceil</button>
+    <button onclick="sigredondeo()" id="redondeo">round</button>
+    <button onclick="suelo()" id="suelo">floor</button>
+    <button onclick="techo()" id="techo">ceil</button>
 
     <script>
         function sumar(numero1,numero2){
@@ -106,10 +106,10 @@
             }
 
             function signoPotencia(){
-                elementonumero1 = parseInt(document.getElementById("numero1").value);
-                elementonumero2 = parseInt(document.getElementById("numero2").value);
-                elementoText = document.getElementById("textoResultado");
-                elementopotencia = potencia (elementonumero1,elementonumero2);
+                let elementonumero1 = parseInt(document.getElementById("numero1").value);
+                let elementonumero2 = parseInt(document.getElementById("numero2").value);
+                let elementoText = document.getElementById("textoResultado");
+                let elementopotencia = potencia (elementonumero1,elementonumero2);
 
                 document.getElementById("textoResultado").value = resultado;
             }
@@ -120,10 +120,10 @@
             }
 
             function sigabsoluto(numero1,numero2){
-                elementonumero1 = parseInt(document.getElementById("numero1").value);
-                elementonumero2 = parseInt(document.getElementById("numero2").value);
-                elementoText = document.getElementById("textoResultado");
-                elementoabsoluto = absoluto (elementonumero1,elementonumero2);
+                let elementonumero1 = parseInt(document.getElementById("numero1").value);
+                let elementonumero2 = parseInt(document.getElementById("numero2").value);
+                let elementoText = document.getElementById("textoResultado");
+                let elementoabsoluto = absoluto (elementonumero1,elementonumero2);
 
                 document.getElementById("textoResultado").value = resultado;
 
@@ -132,17 +132,46 @@
             
             function random (minimo,maximo){
                resultado = Math.floor(Math.random() * (100-1) + 1);
-               elementoText = document.getElementById("textoResultado");
+               let elementoText = document.getElementById("textoResultado");
                document.getElementById("textoResultado").value = resultado;
             
             }
 
-            function sigredondeo(textoResultado){
-                let redondeo = Math.round(textoResultado);
-                document.getElementById("textoResultado").value = redondeo;
-
+            function redondeo(textoResultado){
+                resultado = Math.round(textoResultado);
+                return resultado;
             }
 
+            function sigredondeo(){
+                let elementoText = parseFloat(document.getElementById("textoResultado").value);
+                let elementoredondeo = redondeo(elementoText);
+
+                document.getElementById("textoResultado").value = resultado;
+            }
+
+            function floor(textoResultado){
+                resultado = Math.floor(textoResultado);
+                return resultado;
+            }
+
+            function suelo(){
+                let elementoText = parseFloat(document.getElementById("textoResultado").value);
+                let elementosuelo = floor(elementoText);
+
+                document.getElementById("textoResultado").value = resultado;
+            }
+
+            function ceil(textoResultado){
+                resultado = Math.ceil(textoResultado);
+                return resultado;
+            }
+
+            function techo(){
+                let elementoText = parseFloat(document.getElementById("textoResultado").value);
+                let elementotecho = ceil(elementoText);
+
+                document.getElementById("textoResultado").value = resultado;
+            }
     </script>
 </body>
 </html>
