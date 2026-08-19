@@ -1,7 +1,46 @@
-.numero1{
-    background-color: rgb(223, 83, 107);
+body {
+    background-color: lightpink;
+}
+#multiplicacion{
+    background-color: lightblue;
 }
 
-.numero2{
-    background-color: lightcoral;
+#division{
+    background-color: lightblue;
+}
+
+#raiz{
+    background-color: lightblue;
+}
+
+#potencia{
+    background-color: lightblue;
+}
+#absoluto{
+    background-color: lightblue;
+}
+#random{
+    background-color: lightblue;
+}
+#redondeo{
+    background-color: lightblue;
+}
+#suelo{
+    background-color: lightblue;
+}
+#techo{
+    background-color: lightblue;
+}   
+
+#suma{
+    background-color: lightblue;
+}
+
+#resta{
+    background-color: lightblue;
+}
+
+h3{
+    color:grey
+
 }
