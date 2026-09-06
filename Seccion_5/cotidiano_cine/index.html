@@ -1,0 +1,32 @@
+<html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Recomendador de Películas</title>
+  <link rel="stylesheet" href="misEstilos.css">
+    <script src="misScripts.js"></script>
+</head>
+<body>
+
+  <h1>¡Bienvenido al Cine!</h1>
+  <h4>---Menú---</h4>
+  <p>Queremos hacer tu vista, una experiencia más placentera. Para eso, ingrese su edad y seleccione el género que más le guste, y te recomendamos tu pelicula ideal.</p>
+
+  <p>Escribe tu edad:</p>
+  <input type="number" id="textoEdad">
+
+  <br><br>
+
+  <button onclick="recomendacion('Drama')">Drama</button>
+  <button onclick="recomendacion('Comedia')">Comedia</button>
+  <button onclick="recomendacion('Musical')">Musical</button>
+  <button onclick="recomendacion('Crimen')">Crimen</button>
+  <button onclick="reiniciar">reiniciar</button>
+
+  <h5>Nuestra recomendación: </h5>
+  <p id="recomendacion"></p>
+
+
+</body>
+</html>
