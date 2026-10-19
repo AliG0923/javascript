@@ -1,26 +1,21 @@
-function verificar() {
-    let elementoRespuesta = document.
-    getElementById("decision");
+function calcular(){
+    let elementoRespuesta1 = document.
+    getElementById("respuesta1");
+    let elementoRespuesta2 = document.
+    getElementById("respuesta2");
+    let elementoRespuesta3 = document.
+    getElementById("respuesta3");
 
     let elementoEdad = document.
     getElementById("textoEdad");
-    let edad = parseInt(elementoEdad.value);
+    let edad = elementoEdad.value;
 
-    if (edad < 18) {
-        elementoRespuesta.textContent = "Tienes " + 
-        edad
-        + " años, te falta " +
-        (18 - parseInt(edad)).toString() +
-        " años para ser mayor de edad";
-    } else {
-        if (edad >= 18 && edad < 21) {
-            elementoRespuesta.textContent = "Tienes " + edad
-            + " años, te falta " +
-            (21 - parseInt(edad)).toString() +
-            " años para " + 21 + ", no puedes comprar licor";
-        } else {
-            elementoRespuesta.textContent = "Ya puedes comprar licor";
-        }
+    let puedeBeber = edad >= 18;
+    elementoRespuesta1.textContent = puedeBeber;
 
-    }
+    let puedeIngresar = edad >= 18 && edad <= 30;
+    elementoRespuesta2.textContent = puedeIngresar;
+
+    let entradagratis = edad == 20 || edad == 25;
+    elementoRespuesta3.textContent = entradagratis;
 }
