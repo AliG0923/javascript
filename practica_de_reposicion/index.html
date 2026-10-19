@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividades recomendadas</title>
+    <link rel="stylesheet" href="misEstilos.css">
+    <script src="misScripts.js"></script>
+</head>
+<body>
+    <h1>Bienvenido a nuestras actividades recreativas</h1> 
+    <h3>Les ofrecemos diferentes tipos de actividades acorde a su presupuesto</h3>
+    <p>Ingrese su presupuesto:</p> 
+    <input type="Number" id="UsuarioPresupuesto"> 
+    <p>ingrese la cantidad de personas que van a ir:</p> 
+    <input type="number" id="numeroPersonas">
+    <br><br>
+
+
+    <button onclick="actividad('deportes')">Deportes</button>
+    <button onclick="actividad('entretenimiento')">Entretenimiento</button>
+    <button onclick="actividad('turismo')">Turismo</button>
+    <button onclick="actividad('actividadesFamiliares')">Actividades Familiares</button>
+
+    <p>Esta es su actividad recomendada:</p>
+    <p id="recomendacion"></p>
+    <p>Personas:</p>
+    <p id="cantidadPersonas"></p>
+    <p>Descuento grupal:</p>
+    <p id="descuento"></p>
+    <p>Monto de descuento:</p>
+    <p id="descuentoSi"></p>
+    <p>Presupuesto final:</p>
+    <p id="montoPagar"></p>
+
+</body>
+</html>

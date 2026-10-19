@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabla</title>
+</head>
+<body>
+    <h1>Ingrese su  numero</h1>
+    <input type="number" id="numero" >
+    <button onclick="testLoop()">calcular</button>
+    
+    <div id="resultado"></div>
+
+    <script>
+        function testLoop() {
+            let numero = document.getElementById("numero").value;
+            let solucion = document.getElementById("resultado");
+            
+            numero = Number(numero);
+
+            for (let y = 1; y <= 10; y++) {
+                let resultado = numero * y;
+                solucion.innerHTML += `${numero} x ${y} = ${resultado}<br>`;
+            }
+        }
+    </script>
+
+</body>
+</html>
