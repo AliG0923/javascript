@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vueltas</title>
+</head>
+<body>
+    <script>
+        function contarVueltas(totalVueltas) {
+            let vuelta = 1;
+
+            while (vuelta <= totalVueltas) {
+                document.write("Vuelta número " + vuelta + "<br>");
+                vuelta++;
+            }
+        }
+
+        const respuestaUsuario = parseInt(prompt("¿Cuántas vueltas quieres dar?"));
+        contarVueltas(respuestaUsuario);
+    </script>
+</body>
+</html>

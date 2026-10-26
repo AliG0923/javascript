@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica</title>
+</head>
+<body>
+    <script>
+        function mostrarTabla(numero) {
+    if (isNaN(numero)) {
+        console.log("Por favor, ingresa un número");
+        return;
+    }
+
+    let contador = 0;
+
+    do {
+        console.log(numero + " x " + contador + " = " + (numero * contador));
+        contador++;
+    } while (contador <= 10);
+}
+
+let entradaUsuario = prompt("cual numero de la tabla de multiplicar necsita??");
+let numeroIngresado = parseInt(entradaUsuario);
+
+mostrarTabla(numeroIngresado);
+
+    </script>
+</body>
+</html>
